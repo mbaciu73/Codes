@@ -27,9 +27,9 @@ def height(tall):
         rows = make_new_row(row,tall)
         #print it out
         for j in rows:
-            print("",j)
+            print(j,end="")
 
 
 #ask the user to enter the height and set the answer to an integer
 pascal = int(input("Enter height of Pascal triangle: "))
-height(pascal)
+
