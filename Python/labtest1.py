@@ -32,4 +32,5 @@ def height(tall):
 
 #ask the user to enter the height and set the answer to an integer
 pascal = int(input("Enter height of Pascal triangle: "))
+print(pascal);
 
