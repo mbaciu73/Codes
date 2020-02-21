@@ -77,7 +77,7 @@ public class Account {
 			setInCredit(true);
 		}
 	}
-	//these display the small details from the abstract class
+	//these display the small details from the interface validateclass
 	public void getDetails() {
 		System.out.println("Account name is "+this.accountName+" and the balance is "+ this.acctBalance);
 	}
