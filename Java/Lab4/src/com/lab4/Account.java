@@ -1,5 +1,7 @@
 package com.lab4;
-
+/*this is the main class where all the numbers are stored. It includes a valid constructor and displays which number you are in terms
+of order
+*/
 public class Account {
 	private String accountName;
 	private int accountNumber;
@@ -16,6 +18,7 @@ public class Account {
 		this.inCredit=inCredit;
 		this.acctBalance=acctBalance;
 	}
+	//getters and setters
 	public String getAccountName() {
 		return accountName;
 	}
@@ -59,9 +62,11 @@ public class Account {
 	public static void setCurrentNumber(int currentNumber) {
 		Account.currentNumber = currentNumber;
 	}
+	//if money wants to be added it can be done so
 	public void deposit(double depAmount) {
 		setAcctBalance(depAmount+this.acctBalance);
 	}
+	//the account balance must be over zero in order for credit to not be set
 	public void withdraw(double takeAmount) {
 		setAcctBalance(this.acctBalance-takeAmount);
 		
@@ -72,16 +77,19 @@ public class Account {
 			setInCredit(true);
 		}
 	}
+	//these display the small details from the abstract class
 	public void getDetails() {
 		System.out.println("Account name is "+this.accountName+" and the balance is "+ this.acctBalance);
 	}
 	public void valuableAccount() {
 		System.out.println("The Account balance is "+this.acctBalance);
 	}
+	//mains string
 	public String toString() {
 		return "This is the "+accountName+"  number "+accountNumber+", sort code is "+sortCode+" in the "+branchName+" branch, the account credit is "+inCredit+
 				" and the balance is "+acctBalance+ " and the current number is "+currentNumber;
 	}
+	//increment of the current number
 	public int nextNumber() {
 		currentNumber++;
 		return currentNumber;
