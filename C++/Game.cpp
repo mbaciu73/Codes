@@ -60,7 +60,7 @@ public:
             }
         }
 };
-//the main where the name of the user is entered and the difficulty choice is also displayed and chosen
+//the main where the name of the user is entered and the difficulty choice is also displayed and chosen and if user decides to quit
 int main(){
     string name;
     int choice;
