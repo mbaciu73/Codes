@@ -3,7 +3,8 @@ or smaller number, each user has 6 tries before the number is revealed to the us
 Author:Markus Baciu
 */
 #include <iostream>
-#include <stdlib.h>>
+#include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 //this class is the game where all the random number generator and displaying is done
 class Game{
@@ -60,7 +61,7 @@ public:
             }
         }
 };
-//the main where the name of the user is entered and the difficulty choice is also displayed and chosen
+//the main where the name of the user is entered and the difficulty choice is also displayed and chosen and if user decides to quit
 int main(){
     string name;
     int choice;
