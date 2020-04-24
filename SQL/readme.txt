@@ -1,0 +1,1 @@
+This is an sql that I have done in Oracle SQL and Data Modeler

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Assignment generates" id="8AA146C3-5472-EAC7-C45B-4D81F341AECF" version="3.5">
+<createdBy>mbaci</createdBy>
+<createdTime>2020-04-11 14:51:04 UTC</createdTime>
+<ownerDesignName>assignment</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8AA146C3-5472-EAC7-C45B-4D81F341AECF</designId>
+</OSDM_Design>
