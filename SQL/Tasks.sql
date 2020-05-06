@@ -7,7 +7,7 @@
 create view TeacherStudent as(
 select teachername,studentname 
 from teacher
-join class using(class_classid)
+join class on(class_classid=classid)
 join student using (studentid)
 group by teachername);
 
@@ -20,19 +20,19 @@ commit;
 --displays when the exam will be on
 select subjectname,examdate 
 from subject
-join exam using(examid);
+join exam on(exam_examid=examid);
 
 --displays which subject has which class
 select subjectName,classID 
 from subject
-join teacher using (teacherID)
+join teacher on(teacher_teacherID=teacherID)
 join class using(classID);
 
 --selects the exam for each teacher
 select teachername,examid
 from teacher
-join subject using(subjectid)
-join exam using(examid);
+join subject on(subject_subjectid=subjectid)
+join exam on(exam_examid=examid);
 
 --displays the unknown classsizes of the student which don't know the size
 select studentname,classsize
