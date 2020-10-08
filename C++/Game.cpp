@@ -1,3 +1,4 @@
+
 /* This program is a creation of a guessing number game whether it is a larger number
 or smaller number, each user has 6 tries before the number is revealed to the user
 Author:Markus Baciu
@@ -26,11 +27,11 @@ public:
     //this is for the number passed. if a number is not entered false is returned.
     bool get_guess(){
         try{
-            cout<<"Enter your guess";
+            cout<<"\nEnter your guess:";
             cin>>this->answer;
         }
-        catch{
-            cout<<"Must be a valid number";
+        catch(exception e){
+            cout<<"\nMust be a valid number\n";
             return false;
         }
         return true;
@@ -38,25 +39,25 @@ public:
     //this includes the game where the number guessing is done incremented and the range is set.
     //it displays if the answer was correct, higher or lower and if out of guesses, it will go to the end
     void play(){
-        cout<<"Well"<<this->name<<", I am thinking of a number between 1 and "<<this->max_no
+        cout<<"Well "<<this->name<<", I am thinking of a number between 1 and "<<this->max_no;
         while(this->guesses<6){
                 this->guesses+=1;
                 if(get_guess()==true){
                     if(this->answer<this->number){
-                        cout<<"Your guess is too low";
+                        cout<<"\nYour guess is too low\n";
                     }
                     if(this->answer>this->number){
-                        cout<<"Your guess is too high";
+                        cout<<"\nYour guess is too high\n";
                     }
                     if(this->answer == this->number){
                         break;
                     }
                 }
                 if(this->answer == this->number){
-                    cout<<"Congratulations"<<this->name<< "You guessed the number in "<<this->guesses<< "guesses";
+                    cout<<"\nCongratulations "<<this->name<< ". You guessed the number in "<<this->guesses<< " guesses";
                 }
                 else{
-                    cout<<"The number was "<<this->number
+                    cout<<"\nHard Luck.The number was "<<this->number;
                 }
             }
         }
@@ -65,21 +66,28 @@ public:
 int main(){
     string name;
     int choice;
-    cout<<"Hello, What is your name";
+    cout<<"Hello, What is your name?\n";
     cin>>name;
-    cout<< "Well "<<name<<" We have 2 options here. Press 1 for easy, 2 for difficult or 3 to quit";
+    cout<< "Well "<<name<<", we have 2 options here\nPress 1 for easy\nPress 2 for difficult\nPress 3 to quit\n";
+    cin>>choice;
     switch(choice){
-    case 1:
-        Game easy(20,name);
-        break;
-    case 2:
-        Game hard(40,name);
-        break;
-    case 3:
-        cout<<"Thank you for playing goodbye!";
-        break;
-    default:
-        cout<<"Please enter a value from above"
-        break;
+        case 1: {
+            Game easy(20, name);
+            easy.play();
+            break;
+        }
+        case 2: {
+            Game hard(40, name);
+            hard.play();
+            break;
+        }
+        case 3: {
+            cout << "Thank you for playing goodbye!";
+            break;
+        }
+        default: {
+            cout << "Please enter a value from above";
+            break;
+        }
     }
 }
