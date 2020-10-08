@@ -1,1 +1,1 @@
-This is an sql that I have done in Oracle SQL and Data Modeler
+Oracle SQL Files created from an ERD on Oracle DataModeller
